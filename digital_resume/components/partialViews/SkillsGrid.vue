@@ -8,28 +8,30 @@
       <!-- Displays all of my known languages using a json object constructed in the script section of this page -->
       <!-- Dynamically collects the name to display but also indivudual styling to make each unique -->
       <div class="skills">
-        <span v-for="skill in languages" :key="skill.name" class="skill" :style="{
-          '--hover-color': skill.color,
-          '--text-color': skill.textColor
-        }">
-          {{ skill.name }}
-        </span>
+        <div class="skills">
+          <button v-for="skill in languages" :key="skill.name" class="skill" @click="openDocs(skill.url)" :style="{
+            '--hover-color': skill.color,
+            '--text-color': skill.textColor
+          }">
+            {{ skill.name }} ↗
+          </button>
+        </div>
       </div>
     </div>
 
     <!-- My Languages -->
     <div class="category">
       <h3 class="green">// Frameworks & Tools</h3>
-      
+
       <!-- Displays all of my known frameworks using a json object constructed in the script section of this page -->
       <!-- Dynamically collects the name to display but also indivudual styling to make each unique -->
       <div class="skills">
-        <span v-for="skill in frameworks" :key="skill.name" class="skill" :style="{
+        <button v-for="skill in frameworks" :key="skill.name" class="skill" @click="openDocs(skill.url)" :style="{
           '--hover-color': skill.color,
           '--text-color': skill.textColor
         }">
-          {{ skill.name }}
-        </span>
+          {{ skill.name }} ↗
+        </button>
       </div>
     </div>
 
@@ -40,19 +42,64 @@
 // Json of all my known languages
 // color and textColor are what the object changes to when hovered over
 const languages = [
-  { name: "C#", color: "#68217A", textColor: "#ffffff" },
-  { name: "JavaScript", color: "#f7df1e", textColor: "#000000" },
-  { name: "HTML", color: "#e34c26", textColor: "#ffffff" },
-  { name: "CSS", color: "#264de4", textColor: "#ffffff" }
+  {
+    name: "C#",
+    color: "#68217A",
+    textColor: "#ffffff",
+    url: "https://learn.microsoft.com/en-us/dotnet/csharp/"
+  },
+  {
+    name: "JavaScript",
+    color: "#f7df1e",
+    textColor: "#000000",
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  {
+    name: "HTML",
+    color: "#e34c26",
+    textColor: "#ffffff",
+    url: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+  },
+  {
+    name: "CSS",
+    color: "#264de4",
+    textColor: "#ffffff",
+    url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+  }
 ]
 
 // Json of the frameworks I'm familiar with
 // color and textColor are what the object changes to when hovered over
 const frameworks = [
-  { name: "ASP.NET", color: "#512bd4", textColor: "#ffffff" },
-  { name: "Vue", color: "#42b883", textColor: "#ffffff" },
-  { name: ".NET MAUI", color: "#512bd4", textColor: "#ffffff" }
+  {
+    name: "ASP.NET",
+    color: "#512bd4",
+    textColor: "#ffffff",
+    url: "https://learn.microsoft.com/en-us/aspnet/core/"
+  },
+  {
+    name: "Vue",
+    color: "#42b883",
+    textColor: "#ffffff",
+    url: "https://vuejs.org/"
+  },
+  {
+    name: ".NET MAUI",
+    color: "#512bd4",
+    textColor: "#ffffff",
+    url: "https://learn.microsoft.com/en-us/dotnet/maui/"
+  },
+  {
+    name: "Bootstrap",
+    color: "#7952B3",
+    textColor: "#ffffff",
+    url: "https://getbootstrap.com/"
+  }
 ]
+
+function openDocs(url) {
+  window.open(url, '_blank')
+}
 </script>
 
 <style scoped>
@@ -77,13 +124,15 @@ const frameworks = [
 
 .skill {
   padding: var(--space-xs) var(--space-xs);
-
+  color: var(--text-primary);
   font-size: var(--space-base);
 
-  background: rgba(250,250,250,0.03);
+  background: rgba(250, 250, 250, 0.03);
 
   border: 1px solid var(--border-light);
   border-radius: var(--radius-2xs);
+
+  cursor: pointer;
 }
 
 .skill:hover {

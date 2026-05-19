@@ -13,7 +13,7 @@
             <!-- Description -->
              <p><span class="teal">Developer</span> <span class="light-blue">alexSprague</span> = <span class="blue">new</span> <span class="teal">Developer</span>();</p>
             <p>
-                <span class="teal">Console</span>.<span class=yellow>WriteLine</span>(<span class="orange">"
+                <span class="teal">Console</span>.<wbr><span class=yellow>WriteLine</span>(<span class="orange">"
                 Backend-focused developer with a growing full-stack skill set, building practical applications with C#
                 and modern web technologies.
                 I focus on clean, scalable code and designing systems that can grow beyond their initial scope.
@@ -26,6 +26,5 @@
 <style scoped>
 .main-content {
     text-align: left;
-    line-height: 1.2;
 }
 </style>

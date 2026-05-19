@@ -18,6 +18,7 @@
     --vs-yellow: #dede33;
     --vs-orange: #CE9178;
     --vs-green: #5ac728;
+    --vs-light-green: rgba(208, 255, 141, 0.842);
     --vs-purple: #C586C0;
     --vs-cyan: #4e81c9;
     --vs-teal: #5acdb6f7;
@@ -72,6 +73,12 @@
     --width-max: 800px
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html,
 body,
 #app {
@@ -87,6 +94,14 @@ body {
     font-size: var(--text-base);
     padding-right: var(--SE-width-closed);
     background: var(--bg-primary);
+}
+
+p {
+    line-height: 1.2;
+}
+
+h3 {
+    margin-bottom: var(--space-2xs);
 }
 
 /* ==================== */
@@ -117,6 +132,10 @@ body {
     color: var(--vs-light-blue);
 }
 
+.light-green{
+    color: var(--vs-light-green);
+}
+
 .logo {
     text-align: left;
     margin-top: var(--space-xl);
@@ -130,6 +149,15 @@ body {
 
 .section-header {
     font-size: var(--text-md);
+}
+
+.section {
+    margin-bottom: var(--space-md);
+}
+
+.section-text {
+    margin-bottom: var(--space-md);
+    max-width: 850px;
 }
 
 /* BUTTONS */
@@ -191,6 +219,29 @@ body {
     justify-content: flex-end;
 
     margin-top: var(--space-md);
+}
+
+.button-row .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Make buttons fill width nicely on mobile */
+.card-actions .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.card-actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-xs);
+
+    padding:
+        0 var(--space-xs)
+        var(--space-xs)
+        var(--space-xs);
 }
 
 /* Glass Card */
@@ -261,6 +312,14 @@ backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.08);
 
     color: rgba(255, 255, 255, 0.75);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+
+    margin-top: var(--space-sm);
 }
 
 /* ANIMATIONS */
