@@ -40,15 +40,15 @@
                 <nav>
 
                     <button @click="navigate('/')">
-                        > AboutMe.vue
+                        > Home.vue
+                    </button>
+                    
+                    <button @click="navigate('/about')">
+                        > AboutMe.cs
                     </button>
 
                     <button @click="navigate('/projects')">
-                        > Projects/
-                    </button>
-
-                    <button @click="navigate('/skills')">
-                        > Skills.json
+                        > Projects.json
                     </button>
 
                     <button @click="navigate('/contact')">
@@ -79,7 +79,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 // Tracks whether the navigation drawer is open or closed
-const isOpen = ref(true)
+const isOpen = ref(false)
 
 // References to actual HTML elements in the template
 // Checks if something was clicked

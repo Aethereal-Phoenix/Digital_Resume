@@ -1,67 +1,82 @@
 :root {
-  /* Background color */
-  --bg-primary: #0f0f0f;
-  --bg-secondary: #171717;
-  --bg-tertiary: #262626;
+    /* Background color */
+    --bg-primary: #0f0f0f;
+    --bg-secondary: #171717;
+    --bg-tertiary: #262626;
 
-  /* Text color */
-  --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.72);
+    /* Text color */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.72);
 
-  /* Accent color */
-  --accent: #7600ff;
-  --accent-secondary: #042ed9;
+    /* Accent color */
+    --accent: #7600ff;
+    --accent-secondary: #042ed9;
 
-  /* Border color */
-  --border-light: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(255, 255, 255, 0.18);
+    /* VS inspired syntax colors */
 
-  /* Background for the glass cards */
-  --glass-bg: rgba(255, 255, 255, 0.04);
+    --vs-blue: #38a5ff;
+    --vs-yellow: #dede33;
+    --vs-orange: #CE9178;
+    --vs-green: #5ac728;
+    --vs-purple: #C586C0;
+    --vs-cyan: #4e81c9;
+    --vs-teal: #5acdb6f7;
+    --vs-light-blue:  #86f3ff;
 
-  /* Radius sizes */
-  --radius-xs: 0.5rem;
-  --radius-sm: 0.75rem;
-  --radius-md: 1rem;
-  --radius-lg: 1.5rem;
+    /* Border color */
+    --border-light: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.18);
 
-  /* Spacing */
-  --space-2xs: 0.5rem;
-  --space-xs: 0.75rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 2rem;
-  --space-xl: 2.5rem;
-  --space-2xl: 5rem;
-  --space-3xl: 7rem;
-  --SE-width-closed: 2.5rem;
+    /* Background for the glass cards */
+    --glass-bg: rgba(255, 255, 255, 0.04);
 
-  /* Font size */
-  --text-sm: 0.75rem;
-  --text-base: 1rem;
-  --text-md: 1.125rem;
-  --text-lg: 1.5rem;
-  --text-xl: 2rem;
-  --text-2xl: 3rem;
-  --text-3xl: 4rem;
+    /* Radius sizes */
+    --radius-2xs: 0.375rem;
+    --radius-xs: 0.5rem;
+    --radius-sm: 0.75rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
 
-  /* The heigh of the cards */
-  --cardHeight-base: 150px;
+    /* Spacing */
+    --space-2xs: 0.5rem;
+    --space-xs: 0.75rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 2.5rem;
+    --space-2xl: 5rem;
+    --space-3xl: 7rem;
+    --SE-width-closed: 2.5rem;
 
-  /* Card shadow */
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.25);
+    /* Font size */
+    --text-sm: 0.75rem;
+    --text-base: 1rem;
+    --text-md: 1.125rem;
+    --text-lg: 1.5rem;
+    --text-xl: 2rem;
+    --text-2xl: 3rem;
+    --text-3xl: 4rem;
 
-  /* Transition speed */
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
+    /* The heigh of the cards */
+    --cardHeight-base: 150px;
 
-  /* Content Width */
-  --content-width: 1100px;
-  --width-max: 800px
+    /* Card shadow */
+    --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    /* Transition speed */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+
+    /* Content Width */
+    --content-width: 1100px;
+    --width-max: 800px
 }
 
-* {
+html,
+body,
+#app {
     background: var(--bg-primary);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -69,5 +84,198 @@ body {
 
     font-family: "Cascadia Code", Consolas, monospace;
 
+    font-size: var(--text-base);
     padding-right: var(--SE-width-closed);
+    background: var(--bg-primary);
+}
+
+/* ==================== */
+/*       Classes        */
+/* ==================== */
+
+.yellow {
+    color: var(--vs-yellow);
+}
+
+.green {
+    color: var(--vs-green);
+}
+
+.orange {
+    color: var(--vs-orange);
+}
+
+.blue {
+    color: var(--vs-blue);
+}
+
+.teal {
+    color: var(--vs-teal);
+}
+
+.light-blue {
+    color: var(--vs-light-blue);
+}
+
+.logo {
+    text-align: left;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+    border-bottom: 1px solid var(--accent);
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.section-header {
+    font-size: var(--text-md);
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2xs);
+
+    padding: var(--space-xs) var(--space-xs);
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border-light);
+
+    border-radius: var(--radius-2xs);
+
+    color: var(--text-primary);
+
+    text-decoration: none;
+
+    font-size: var(--text-base);
+
+    transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast);
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--bg-tertiary);
+
+    border-color: var(--accent);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-primary {
+    border-left: 3px solid var(--accent);
+}
+
+.btn-primary:hover {
+    box-shadow:
+        0 8px 24px rgba(118, 0, 255, 0.45);
+}
+
+.btn-secondary {
+    border: 1px solid var(--border-light);
+
+    color: white;
+}
+
+.btn-row {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: var(--space-md);
+}
+
+/* Glass Card */
+.glass-card {
+    position: relative;
+    margin: var(--space-sm) 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    background: var(--glass-bg);
+
+    border: 1px solid rgb(118, 0, 255, .5);
+
+    border-radius: var(--radius-xs);
+backdrop-filter: blur(4px);
+
+    overflow: hidden;
+    transition:
+        transform var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+}
+
+.glass-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--border-hover);
+
+    box-shadow: var(--shadow-card);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: var(--space-sm);
+}
+
+.card-top {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: var(--space-xxs);
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    margin-top: var(--space-xs);
+
+    padding: var(--space-2xs) var(--space-2xs);
+
+    border-radius: 999px;
+
+    font-size: var(--text-sm);
+
+    letter-spacing: 0.08rem;
+
+    text-transform: uppercase;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* ANIMATIONS */
+.fade-up {
+    animation: fadeUp 0.8s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
