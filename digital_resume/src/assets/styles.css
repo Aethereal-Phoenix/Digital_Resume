@@ -1,0 +1,70 @@
+:root {
+  /* Background color */
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #171717;
+  --bg-tertiary: #262626;
+
+  /* Text color */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.72);
+
+  /* Accent color */
+  --accent: #7600ff;
+  --accent-secondary: #042ed9;
+
+  /* Border color */
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.18);
+
+  /* Background for the glass cards */
+  --glass-bg: rgba(255, 255, 255, 0.04);
+
+  /* Radius sizes */
+  --radius-xs: 0.5rem;
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+
+  /* Spacing */
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 5rem;
+  --space-3xl: 7rem;
+
+  /* Font size */
+  --text-sm: 0.75rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
+  --text-2xl: 3rem;
+  --text-3xl: 4rem;
+
+  /* The heigh of the cards */
+  --cardHeight-base: 150px;
+
+  /* Card shadow */
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  /* Transition speed */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+
+  /* Content Width */
+  --content-width: 1100px;
+  --width-max: 800px
+}
+
+* {
+    background: var(--bg-primary);
+}
+
+body {
+color: var(--text-primary);
+
+    font-family: "Cascadia Code", Consolas, monospace;
+}
