@@ -1,31 +1,36 @@
 <template>
     <div class="layout">
 
-        <!-- ACTIVITY BAR -->
+        <!-- Solution Explorer (Navigation bar) -->
         <aside class="activity-bar">
 
             <div class="top-icons">
 
-                <button class="icon-button active" @click="toggleMenu">
+                <!-- Menu Button -->
+                <!-- Will open the nav bar using @click which works like an eventListener -->
+                <button ref="menuButtonRef" class="icon-button active" @click.stop="toggleMenu">
                     ☰
                 </button>
 
                 <!-- Vertical Title -->
-            <div class="explorer-title">
-                Solution Explorer
-            </div>
+                 <!-- Displays the title reading from the top down like in Visual Studio -->
+                <div class="explorer-title">
+                    Solution Explorer
+                </div>
 
-            <button class="icon-button">
+                <!-- Settings -->
+                 <!-- WIll later add the dark/light mode toggle in thus  -->
+                <button class="icon-button">
                     ⚙
                 </button>
+
             </div>
 
         </aside>
 
-        <!-- EXPLORER PANEL -->
-        <aside :class="['explorer', { open: isOpen }]">
+        <!-- Explorer Panel -->
+        <aside ref="explorerRef" :class="['explorer', { open: isOpen }]">
 
-            <!-- Content -->
             <div class="explorer-content">
 
                 <div class="section-title">
@@ -35,19 +40,19 @@
                 <nav>
 
                     <button @click="navigate('/')">
-                         >AboutMe.vue
+                        > AboutMe.vue
                     </button>
 
                     <button @click="navigate('/projects')">
-                        >Projects/
+                        > Projects/
                     </button>
 
                     <button @click="navigate('/skills')">
-                        >Skills.json
+                        > Skills.json
                     </button>
 
                     <button @click="navigate('/contact')">
-                        >Contact.md
+                        > Contact.md
                     </button>
 
                 </nav>
@@ -60,20 +65,103 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+// Imports
+import {
+    ref,               // Creates reactive variables that Vue tracks for updates
+    onMounted,         // Runs code when the component is added to the page
+    onBeforeUnmount    // Runs code right before the component is removed
+} from 'vue'
+
+// Router
 import { useRouter } from 'vue-router'
 
+// Creates a router instance
 const router = useRouter()
 
+// Tracks whether the navigation drawer is open or closed
 const isOpen = ref(true)
 
+// References to actual HTML elements in the template
+// Checks if something was clicked
+const explorerRef = ref(null)
+const menuButtonRef = ref(null)
+
+
+// ==============================
+// NAVIGATION MENU FUNCTIONS
+// ==============================
+
+// Opens or closes the sidebar menu
+// If currently open -> close it
+// If currently closed -> open it
 function toggleMenu() {
     isOpen.value = !isOpen.value
 }
 
+
+// Handles page navigation
 function navigate(route) {
+    // Changes the view to the selected component
     router.push(route)
+
+    toggleMenu();
 }
+
+
+// ==============================
+// OUTSIDE CLICK DETECTION
+// ==============================
+
+// Detects clicks/touches anywhere on the screen
+function handlePointerDown(event) {
+
+    // Checks if the click happened INSIDE the explorer/sidebar
+    const clickedExplorer =
+        explorerRef.value?.contains(event.target)
+
+    // Checks if the click happened on the menu button itself
+    const clickedMenuButton =
+        menuButtonRef.value?.contains(event.target)
+
+    // If the click was NOT inside either element,
+    // then the user clicked outside the navbar area
+    if (!clickedExplorer && !clickedMenuButton) {
+
+        // Close the navbar
+        isOpen.value = false
+    }
+}
+
+
+// ==============================
+// COMPONENT LIFECYCLE
+// ==============================
+
+// Runs once when the component is added to the page
+onMounted(() => {
+
+    // Adds a global listener that watches for clicks/touches
+    // anywhere on the screen
+    window.addEventListener(
+        'pointerdown',
+        handlePointerDown
+    )
+})
+
+
+// Runs right before the component is removed
+onBeforeUnmount(() => {
+
+    // Removes the event listener to prevent:
+    // - memory leaks
+    // - duplicate listeners
+    // - unexpected behavior
+    window.removeEventListener(
+        'pointerdown',
+        handlePointerDown
+    )
+})
+
 </script>
 
 <style scoped>
@@ -89,10 +177,10 @@ function navigate(route) {
     z-index: 2000;
 }
 
-/* ACTIVITY BAR */
+/* Activity Bar */
 
 .activity-bar {
-    width: var(--space-xl);
+    width: var(--SE-width-closed);
     height: 100%;
 
     background: var(--bg-secondary);
@@ -109,6 +197,7 @@ function navigate(route) {
 .top-icons {
     display: flex;
     flex-direction: column;
+
     gap: var(--space-2xs);
 }
 
@@ -120,7 +209,9 @@ function navigate(route) {
     border-radius: var(--radius-xs);
 
     background: transparent;
-    color:var(--text-secondary);
+
+    color: var(--text-secondary);
+
     cursor: pointer;
 
     font-size: var(--text-lg);
@@ -129,11 +220,12 @@ function navigate(route) {
 }
 
 .icon-button:hover {
-    background: #2d2d2d;
+    background: var(--bg-tertiary);
 }
 
 .icon-button.active {
-    background:var(--bg-tertiary);
+    background: var(--bg-tertiary);
+
     color: var(--text-primary);
 }
 
@@ -156,7 +248,7 @@ function navigate(route) {
 }
 
 .explorer.open {
-    width: 125px;
+    width: 175px;
 }
 
 /* VERTICAL LABEL */
@@ -164,7 +256,7 @@ function navigate(route) {
 .explorer-title {
     writing-mode: vertical-rl;
 
-    background:var(--bg-secondary);
+    background: var(--bg-secondary);
 
     color: var(--text-secondary);
 
@@ -185,7 +277,7 @@ function navigate(route) {
 }
 
 .section-title {
-    color:var(--text-secondary);
+    color: var(--text-secondary);
 
     font-size: var(--space-xs);
 
@@ -201,13 +293,14 @@ nav {
 
 nav button {
     background: transparent;
+
     border: none;
 
     color: var(--text-primary);
 
     text-align: left;
 
-    padding: var(--space-2xs) 0 var(--space-2xs) 0 ;
+    padding: var(--space-2xs) 0;
 
     border-radius: var(--radius-xs);
 
