@@ -2,14 +2,14 @@
 <template>
     <div class="page contact-page fade-up">
 
-        <!-- ==================== -->
-        <!-- Header               -->
-        <!-- ==================== -->
+        <!-- Header -->
 
         <section class="section">
 
             <h1 class="section-header green">
-                // Contact
+                //<br>
+                // Contact<br>
+                //
             </h1>
 
             <p class="section-text">
@@ -20,9 +20,7 @@
 
         </section>
 
-        <!-- ==================== -->
-        <!-- Contact Form         -->
-        <!-- ==================== -->
+        <!-- Contact Form -->
 
         <section class="contact-wrapper">
 
@@ -35,19 +33,17 @@
                 <!-- Optional -->
                 <input type="hidden" name="_subject" value="New Portfolio Contact Submission">
 
-                <!-- ==================== -->
-                <!-- Name Row             -->
-                <!-- ==================== -->
+                <!-- Name Row -->
 
                 <div class="row two-column">
 
                     <div class="input-group">
 
                         <label for="firstName">
-                            // firstName
+                            <span class="blue">string</span> <span class="light-blue">firstName</span> =
                         </label>
 
-                        <input type="text" id="firstName" name="firstName" placeholder="John"
+                        <input type="text" id="firstName" name="firstName" placeholder="// Your first name"
                             pattern="[A-Za-z]+" title="First name cannot contain numbers." required>
 
                     </div>
@@ -55,26 +51,24 @@
                     <div class="input-group">
 
                         <label for="lastName">
-                            // lastName
+                            <span class="blue">string</span> <span class="light-blue">lastName</span> =
                         </label>
 
-                        <input type="text" id="lastName" name="lastName" placeholder="Doe"
+                        <input type="text" id="lastName" name="lastName" placeholder="// Your last name"
                             pattern="[A-Za-z]+" title="Last name cannot contain numbers." required>
 
                     </div>
 
                 </div>
 
-                <!-- ==================== -->
-                <!-- Contact Info         -->
-                <!-- ==================== -->
+                <!-- Contact Info -->
 
                 <div class="row two-column">
 
                     <div class="input-group">
 
                         <label for="email">
-                            // email
+                            <span class="blue">string</span> <span class="light-blue">emailAddress</span> =
                         </label>
 
                         <input type="email" id="email" name="email" placeholder="example@email.com" required>
@@ -84,35 +78,30 @@
                     <div class="input-group">
 
                         <label for="phone">
-                            // phoneNumber
+                            <span class="teal">Phone</span> <span class="light-blue">phoneNumber</span> =
                         </label>
 
-                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890"
-                            pattern="[0-9\-()\s]+" title="Phone number cannot contain letters.">
+                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9\-()\s]+"
+                            title="Phone number cannot contain letters.">
 
                     </div>
 
                 </div>
 
-                <!-- ==================== -->
-                <!-- Message              -->
-                <!-- ==================== -->
+                <!-- Message -->
 
                 <div class="input-group text-field">
 
                     <label for="message">
-                        // message
+                        <span class="blue">string</span> <span class="light-blue">message</span> =
                     </label>
 
                     <textarea id="message" name="message" rows="8"
-                        placeholder="// Tell me about your project, question, or opportunity..."
-                        required></textarea>
+                        placeholder="// Tell me about your project, question, or opportunity..." required></textarea>
 
                 </div>
 
-                <!-- ==================== -->
-                <!-- Submit Button        -->
-                <!-- ==================== -->
+                <!-- Submit Button -->
 
                 <div class="button-row">
 
@@ -130,18 +119,7 @@
 </template>
 
 <style scoped>
-
-/* ==================== */
-/* Mobile First Layout  */
-/* ==================== */
-
-.button-row .btn {
-    justify-content: center;
-}
-
-/* ==================== */
-/* Contact Wrapper      */
-/* ==================== */
+/* Contact Wrapper */
 
 .contact-wrapper {
     width: 100%;
@@ -150,9 +128,7 @@
     justify-content: flex-start;
 }
 
-/* ==================== */
-/* Contact Card         */
-/* ==================== */
+/* Contact Card */
 
 .contact-card {
     width: 100%;
@@ -162,9 +138,7 @@
     padding: var(--space-xs);
 }
 
-/* ==================== */
-/* Form Layout          */
-/* ==================== */
+/* Form Layout */
 
 .row {
     display: flex;
@@ -187,21 +161,16 @@
 .text-field {
     margin-bottom: var(--space-md);
 }
-/* ==================== */
-/* Labels               */
-/* ==================== */
 
+/* Labels */
 label {
-    color: var(--vs-green);
 
     font-size: var(--text-sm);
 
     opacity: 0.9;
 }
 
-/* ==================== */
-/* Inputs               */
-/* ==================== */
+/* Inputs */
 
 input,
 textarea {
@@ -247,5 +216,16 @@ textarea {
     resize: vertical;
 
     min-height: 160px;
+}
+
+@media (min-width: 768px) {
+
+    .two-column {
+        flex-direction: row;
+    }
+
+    .two-column .input-group {
+        flex: 1;
+    }
 }
 </style>

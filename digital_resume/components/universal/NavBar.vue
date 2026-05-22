@@ -13,13 +13,13 @@
                 </button>
 
                 <!-- Vertical Title -->
-                 <!-- Displays the title reading from the top down like in Visual Studio -->
+                <!-- Displays the title reading from the top down like in Visual Studio -->
                 <div class="explorer-title">
                     Solution Explorer
                 </div>
 
                 <!-- Settings -->
-                 <!-- WIll later add the dark/light mode toggle in thus  -->
+                <!-- WIll later add the dark/light mode toggle in thus  -->
                 <button class="icon-button">
                     ⚙
                 </button>
@@ -42,7 +42,7 @@
                     <button @click="navigate('/')">
                         > Home.vue
                     </button>
-                    
+
                     <button @click="navigate('/about')">
                         > AboutMe.cs
                     </button>
@@ -57,6 +57,7 @@
 
                 </nav>
 
+                <Pokemon />
             </div>
 
         </aside>
@@ -71,9 +72,8 @@ import {
     onMounted,         // Runs code when the component is added to the page
     onBeforeUnmount    // Runs code right before the component is removed
 } from 'vue'
-
-// Router
 import { useRouter } from 'vue-router'
+import Pokemon from './Pokemon.vue'
 
 // Creates a router instance
 const router = useRouter()
@@ -248,7 +248,7 @@ onBeforeUnmount(() => {
 }
 
 .explorer.open {
-    width: 175px;
+    width: 200px;
 }
 
 /* VERTICAL LABEL */

@@ -12,6 +12,3 @@ import AboutPreview from '../partialViews/AboutPreview.vue';
 import ProjectsPreview from '../partialViews/ProjectsPreview.vue'
 import SkillsGrid from '../partialViews/SkillsGrid.vue'
 </script>
-
-<style scoped>
-</style>

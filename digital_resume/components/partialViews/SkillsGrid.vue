@@ -6,7 +6,7 @@
     <div class="category">
       <h3 class="green">// Languages</h3>
       <!-- Displays all of my known languages using a json object constructed in the script section of this page -->
-      <!-- Dynamically collects the name to display but also indivudual styling to make each unique -->
+      <!-- Dynamically collects the name to display but also individual styling to make each unique -->
       <div class="skills">
         <div class="skills">
           <button v-for="skill in languages" :key="skill.name" class="skill" @click="openDocs(skill.url)" :style="{

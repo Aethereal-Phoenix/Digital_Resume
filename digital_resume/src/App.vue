@@ -4,16 +4,13 @@
     <h1>Alex Sprague</h1>
   </div>
   <div class="display-area">
-  <router-view />
+    <router-view />
   </div>
+  
+  <Footer />
 </template>
 
 <script setup>
 import NavBar from '../components/universal/NavBar.vue'
+import Footer from '../components/universal/FooterBar.vue'
 </script>
-
-<style scoped>
-.display-area {
-  padding: 0 var(--space-sm);
-}
-</style>

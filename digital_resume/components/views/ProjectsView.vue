@@ -1,25 +1,20 @@
 <!-- Projects page displaying featured projects, archived work, and additional learning -->
 <template>
     <div class="page fade-up">
-
-        <!-- ==================== -->
         <!-- Featured Projects   -->
-        <!-- ==================== -->
-        <section class="section">
             <h1 class="section-header green">
-                // Featured_Projects
+                //<br>// Featured_Projects<br>//
             </h1>
 
             <p class="section-text">
                 <span class="teal">Console</span>.<wbr><span class="yellow">WriteLine</span>(<span
-                    class="orange">"Projects focused on real-world problem solving, scalable architecture, and modern
+                    class="orange">"Projects focused on real-world problem solving, scalable architecture, and learning
                     development practices."</span>);
             </p>
 
             <div class="grid-auto">
-
                 <!-- Featured Project Cards -->
-                <article v-for="project in featuredProjects" :key="project.title" class="glass-card">
+                <div v-for="project in featuredProjects" :key="project.title" class="glass-card">
 
                     <div class="card-content">
 
@@ -46,7 +41,7 @@
                     </div>
 
                     <!-- Buttons -->
-                    <div class="card-actions">
+                    <div class="card-actions btn-row">
 
                         <a :href="project.live" target="_blank" class="btn btn-primary">
                             Open Live Site ↗
@@ -58,10 +53,9 @@
 
                     </div>
 
-                </article>
+                </div>
 
             </div>
-        </section>
 
         <!-- ==================== -->
         <!-- Archive Section      -->
@@ -144,7 +138,7 @@
                     technical practice."</span>);
             </p>
 
-            <div class="learning-grid">
+            <div class="grid-auto">
 
                 <!-- Learning Cards -->
                 <article v-for="item in learning" :key="item.title" class="glass-card learning-card">
@@ -215,9 +209,7 @@ const featuredProjects = [
     }
 ]
 
-/* ==================== */
 /* Additional Projects  */
-/* ==================== */
 
 const additionalProjects = [
     {
@@ -262,9 +254,7 @@ const additionalProjects = [
     }
 ]
 
-/* ==================== */
 /* Additional Learning  */
-/* ==================== */
 
 const learning = [
     {
@@ -289,12 +279,6 @@ const learning = [
 /* ==================== */
 
 /* MOBILE FIRST */
-.grid-auto {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-sm);
-}
-
 .learning-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -305,15 +289,7 @@ const learning = [
     margin-top: var(--space-xs);
 }
 
-/* Make buttons fill width nicely on mobile */
-.card-actions .btn {
-    width: 100%;
-    justify-content: center;
-}
-
-/* ==================== */
 /* Archive Dropdown     */
-/* ==================== */
 
 .archive-dropdown {
     background: rgba(255, 255, 255, 0.02);
@@ -363,9 +339,7 @@ const learning = [
     padding: var(--space-sm);
 }
 
-/* ==================== */
 /* Learning Cards       */
-/* ==================== */
 
 .learning-card {
     justify-content: space-between;
