@@ -1,7 +1,7 @@
 <!-- Component that talks about me -->
 <template>
     <div class="page fade-up">
-        <h1 class="green section-header">/// <br />/// About Me<br />///</h1>
+        <h1 class="green section-header">/// <br />/// About_Me<br />///</h1>
         <section class="about-text">
 
             <h3 class="green section-header">// Character_Background</h3>

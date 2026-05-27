@@ -2,10 +2,13 @@
 <template>
     <div class="page fade-up">
         <!-- Featured Projects   -->
+
+            <!-- Creates a header that is inspried by a Summary comment block in C# -->
             <h1 class="section-header green">
                 //<br>// Featured_Projects<br>//
             </h1>
 
+            <!-- Text block that is inspired by VS colors for C# -->
             <p class="section-text">
                 <span class="teal">Console</span>.<wbr><span class="yellow">WriteLine</span>(<span
                     class="orange">"Projects focused on real-world problem solving, scalable architecture, and learning

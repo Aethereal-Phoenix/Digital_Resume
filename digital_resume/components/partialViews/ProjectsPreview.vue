@@ -5,6 +5,7 @@
 
         <!-- Grid to diplay my three best project so far -->
         <!-- Uses a Json to gather the parts needed to dynamically make each card -->
+        <!-- On mobil vertically stacked, at 768px or wider horizontaly displayed -->
         <div class="grid-auto">
             <div v-for="project in projects" :key="project.id" class="glass-card">
                 <!-- the entire card displayed is a link that takes the user to the GitHub of that project -->
@@ -12,11 +13,12 @@
                     <div class="card-content">
                         <h3>{{ project.title }}</h3>
 
+                        <!-- Stylized tag that shows that this is a project -->
                         <div class="card-top">
                             <span class="tag">Project</span>
                         </div>
 
-
+                        <!-- A description of the project pulled from the JSON -->
                         <p>
                             {{ project.description }}
                         </p>
@@ -64,20 +66,21 @@ const projects = [
 ]
 </script>
 
+<!-- Styling that only applies to this component -->
 <style scoped>
+
+/* Style for the project link */
 .project-link {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
+/* Style for the card when the user hovers over it */
+/* The card appears to raise up a small amount */
 .project-link:hover .glass-card {
     transform: translateY(-4px);
     transition: 0.25s ease;
     cursor: pointer;
-}
-
-h3 {
-    margin: 0
 }
 </style>

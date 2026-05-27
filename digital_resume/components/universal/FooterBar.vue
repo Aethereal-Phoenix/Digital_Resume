@@ -8,32 +8,21 @@
             <!-- Footer Header -->
             <div class="footer-title">
                 <span class="green">// Footer.cs</span>
+                <br>
+                <span class="green">// Alex Sprague</span>
             </div>
 
             <!-- Footer Links -->
             <div class="footer-links">
 
-                <a
-                    href="https://github.com/Aethereal-Phoenix"
-                    target="_blank"
-                    class="footer-link"
-                >
-                    <span class="teal">Repository</span>.<wbr><span class="yellow">Open</span>(<span class="orange">"GitHub"</span>);
+                <a href="https://github.com/Aethereal-Phoenix" target="_blank" class="footer-link">
+                    <span class="teal">Repository</span>.<wbr><span class="yellow">Open</span>(<span
+                        class="orange">"GitHub"</span>);
                 </a>
 
-                <a
-                    href="/resume.pdf"
-                    target="_blank"
-                    class="footer-link"
-                >
-                    <span class="teal">File</span>.<wbr><span class="yellow">Open</span>(<span class="orange">"Resume.pdf"</span>);
-                </a>
-
-                <router-link
-                    to="/contact"
-                    class="footer-link"
-                >
-                    <span class="teal">Navigation</span>.<wbr><span class="yellow">Open</span>(<span class="orange">"Contact.md"</span>);
+                <router-link to="/contact" class="footer-link">
+                    <span class="teal">Navigation</span>.<wbr><span class="yellow">Open</span>(<span
+                        class="orange">"Contact.md"</span>);
                 </router-link>
 
             </div>
@@ -71,7 +60,6 @@
 </template>
 
 <style scoped>
-
 /* Footer Wrapper */
 
 .footer-wrapper {
@@ -90,8 +78,7 @@
     width: 100%;
 
     padding:
-        var(--space-lg)
-        var(--space-sm);
+        var(--space-lg) var(--space-sm);
 
     display: flex;
     flex-direction: column;
@@ -149,8 +136,7 @@
     gap: var(--space-sm);
 
     padding:
-        var(--space-2xs)
-        var(--space-sm);
+        var(--space-2xs) var(--space-sm);
 
     font-size: var(--text-sm);
 
@@ -186,7 +172,7 @@
 
     box-shadow:
         0 0 8px rgba(90, 199, 40, 0.75);
-    
+
     display: none;
 }
 
@@ -195,14 +181,14 @@
     padding-left: var(--space-lg);
     padding-right: calc(var(--space-lg) + var(--SE-width-closed));
 }
+
 /* Tablet/Desktop */
 
 @media (min-width: 768px) {
 
     .footer-content {
         padding:
-            var(--space-xl)
-            var(--space-lg);
+            var(--space-xl) var(--space-lg);
     }
 
     .footer-links {

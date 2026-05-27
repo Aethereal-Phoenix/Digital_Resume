@@ -9,6 +9,8 @@
       <!-- Dynamically collects the name to display but also individual styling to make each unique -->
       <div class="skills">
         <div class="skills">
+          <!-- v-for a vue for loop: looks for each skill in languages -->
+           
           <button v-for="skill in languages" :key="skill.name" class="skill" @click="openDocs(skill.url)" :style="{
             '--hover-color': skill.color,
             '--text-color': skill.textColor
