@@ -181,9 +181,7 @@
 
 <script setup>
 
-/* ==================== */
-/* Featured Projects    */
-/* ==================== */
+/* Featured Projects */
 
 const featuredProjects = [
     {
@@ -207,7 +205,6 @@ const featuredProjects = [
         description:
             'Collection of exercises and small applications focused on strengthening core C# concepts, software architecture, and problem-solving skills.',
         tech: ['C#', '.NET'],
-        live: '...',
         repo: 'https://github.com/Aethereal-Phoenix/Csharp_Players_Guide_5th_Edition'
     }
 ]
@@ -218,7 +215,7 @@ const additionalProjects = [
     {
         title: 'About a Company',
         description:
-            'Responsive informational business website built with semantic HTML and modern CSS layout techniques.',
+            'Simple website that displays use of containers, header hierarchy and themed colors to create a fake stores website.',
         tech: ['HTML', 'CSS'],
         live: 'https://aethereal-phoenix.github.io/CIS_130-About-a-Company/',
         repo: 'https://github.com/Aethereal-Phoenix/CIS_130-About-a-Company'
@@ -226,7 +223,7 @@ const additionalProjects = [
     {
         title: 'Bed and Breakfast',
         description:
-            'Multi-page hospitality website emphasizing responsive layouts and clean user experience.',
+            'Multi-page hospitality website utilizing tables to show different room options and information about those rooms',
         tech: ['HTML', 'CSS'],
         live: 'https://aethereal-phoenix.github.io/CIS_130-Bed-and-Breakfast/',
         repo: 'https://github.com/Aethereal-Phoenix/CIS_130-Bed-and-Breakfast'
@@ -234,7 +231,7 @@ const additionalProjects = [
     {
         title: 'The Funyon',
         description:
-            'Satirical news-style website focused on typography hierarchy and structured layouts.',
+            'Satirical news-style website focused on typography hierarchy and structured layouts and displaying use of mobil first responsive design.',
         tech: ['HTML', 'CSS'],
         live: 'https://aethereal-phoenix.github.io/CIS_130-The_Funyon/',
         repo: 'https://github.com/Aethereal-Phoenix/CIS_130-The_Funyon'
@@ -242,7 +239,7 @@ const additionalProjects = [
     {
         title: 'Fit for Fitness',
         description:
-            'Fitness-oriented website designed around responsive UI principles and accessible structure.',
+            'Fitness-oriented website designed around responsive UI principles and accessible structure. As well as displaying use of bootstrap, modals and forms to create a polished look.',
         tech: ['HTML', 'CSS'],
         live: 'https://aethereal-phoenix.github.io/CIS_130-Fit_for_Fitness/',
         repo: 'https://github.com/Aethereal-Phoenix/CIS_130-Fit_for_Fitness'
@@ -277,9 +274,7 @@ const learning = [
 </script>
 
 <style scoped>
-/* ==================== */
-/* Grid Layouts         */
-/* ==================== */
+/* Grid Layouts */
 
 /* MOBILE FIRST */
 .learning-grid {

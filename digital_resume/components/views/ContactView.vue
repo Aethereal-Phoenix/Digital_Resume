@@ -24,7 +24,7 @@
 
         <section class="contact-wrapper">
 
-            <form action="https://formsubmit.co/6e3b188ede6049622d2d41cb939c6ebc" method="POST"
+            <form action="https://formsubmit.co/webdesign@alsprague.tech" method="POST"
                 class="contact-card glass-card">
 
                 <!-- FormSubmit -->

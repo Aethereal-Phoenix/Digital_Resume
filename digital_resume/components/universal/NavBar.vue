@@ -20,9 +20,9 @@
 
                 <!-- Settings -->
                 <!-- WIll later add the dark/light mode toggle in thus  -->
-                <button class="icon-button">
+                <!-- <button class="icon-button">
                     ⚙
-                </button>
+                </button> Want to turn this into a light/dark mode toggle -->
 
             </div>
 
@@ -86,10 +86,7 @@ const isOpen = ref(false)
 const explorerRef = ref(null)
 const menuButtonRef = ref(null)
 
-
-// ==============================
 // NAVIGATION MENU FUNCTIONS
-// ==============================
 
 // Opens or closes the sidebar menu
 // If currently open -> close it
@@ -107,10 +104,7 @@ function navigate(route) {
     toggleMenu();
 }
 
-
-// ==============================
 // OUTSIDE CLICK DETECTION
-// ==============================
 
 // Detects clicks/touches anywhere on the screen
 function handlePointerDown(event) {
@@ -132,10 +126,7 @@ function handlePointerDown(event) {
     }
 }
 
-
-// ==============================
 // COMPONENT LIFECYCLE
-// ==============================
 
 // Runs once when the component is added to the page
 onMounted(() => {
