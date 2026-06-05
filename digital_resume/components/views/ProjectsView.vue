@@ -3,66 +3,64 @@
     <div class="page fade-up">
         <!-- Featured Projects   -->
 
-            <!-- Creates a header that is inspried by a Summary comment block in C# -->
-            <h1 class="section-header green">
-                //<br>// Featured_Projects<br>//
-            </h1>
+        <!-- Creates a header that is inspried by a Summary comment block in C# -->
+        <h1 class="section-header green">
+            //<br>// Featured_Projects<br>//
+        </h1>
 
-            <!-- Text block that is inspired by VS colors for C# -->
-            <p class="section-text">
-                <span class="teal">Console</span>.<wbr><span class="yellow">WriteLine</span>(<span
-                    class="orange">"Projects focused on real-world problem solving, scalable architecture, and learning
-                    development practices."</span>);
-            </p>
+        <!-- Text block that is inspired by VS colors for C# -->
+        <p class="section-text">
+            <span class="teal">Console</span>.<wbr><span class="yellow">WriteLine</span>(<span class="orange">"Projects
+                focused on real-world problem solving, scalable architecture, and learning
+                development practices."</span>);
+        </p>
 
-            <div class="grid-auto">
-                <!-- Featured Project Cards -->
-                <div v-for="project in featuredProjects" :key="project.title" class="glass-card">
+        <div class="grid-auto">
+            <!-- Featured Project Cards -->
+            <div v-for="project in featuredProjects" :key="project.title" class="glass-card">
 
-                    <div class="card-content">
+                <div class="card-content">
 
-                        <!-- Top Section -->
-                        <div>
-                            <h3>{{ project.title }}</h3>
+                    <!-- Top Section -->
+                    <div>
+                        <h3>{{ project.title }}</h3>
 
-                            <div class="card-top">
-                                <span class="tag">Featured</span>
-                            </div>
-
-                            <p class="description">
-                                {{ project.description }}
-                            </p>
+                        <div class="card-top">
+                            <span class="tag">Featured</span>
                         </div>
 
-                        <!-- Tech Stack -->
-                        <div class="tags">
-                            <span v-for="tech in project.tech" :key="tech" class="tag">
-                                {{ tech }}
-                            </span>
-                        </div>
-
+                        <p class="description">
+                            {{ project.description }}
+                        </p>
                     </div>
 
-                    <!-- Buttons -->
-                    <div class="card-actions btn-row">
-
-                        <a :href="project.live" target="_blank" class="btn btn-primary">
-                            Open Live Site ↗
-                        </a>
-
-                        <a :href="project.repo" target="_blank" class="btn btn-secondary">
-                            Open GitHub ↗
-                        </a>
-
+                    <!-- Tech Stack -->
+                    <div class="tags">
+                        <span v-for="tech in project.tech" :key="tech" class="tag">
+                            {{ tech }}
+                        </span>
                     </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="card-actions btn-row">
+
+                    <a :href="project.live" target="_blank" class="btn btn-primary">
+                        Open Live Site ↗
+                    </a>
+
+                    <a :href="project.repo" target="_blank" class="btn btn-secondary">
+                        Open GitHub ↗
+                    </a>
 
                 </div>
 
             </div>
 
-        <!-- ==================== -->
-        <!-- Archive Section      -->
-        <!-- ==================== -->
+        </div>
+
+        <!-- Archive Section -->
         <section class="section archive-section">
 
             <details class="archive-dropdown">
@@ -79,8 +77,7 @@
                 <div class="grid-auto archive-grid">
 
                     <!-- Additional Projects -->
-                    <article v-for="project in additionalProjects" :key="project.title"
-                        class="glass-card archive-card">
+                    <article v-for="project in additionalProjects" :key="project.title" class="glass-card archive-card">
 
                         <div class="card-content">
 
@@ -126,9 +123,7 @@
 
         </section>
 
-        <!-- ==================== -->
-        <!-- Additional Learning  -->
-        <!-- ==================== -->
+        <!-- Additional Learning -->
         <section class="section">
 
             <h2 class="section-header green">
@@ -325,10 +320,7 @@ const learning = [
 
 .archive-text {
     padding:
-        var(--space-sm)
-        var(--space-sm)
-        0
-        var(--space-sm);
+        var(--space-sm) var(--space-sm) 0 var(--space-sm);
 
     opacity: 0.8;
 }
@@ -342,5 +334,4 @@ const learning = [
 .learning-card {
     justify-content: space-between;
 }
-
 </style>

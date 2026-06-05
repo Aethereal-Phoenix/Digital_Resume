@@ -61,7 +61,7 @@ const projects = [
         title: "Developer Portfolio Website",
         description:
             "Vue-based portfolio showcasing projects and skills, built with reusable components and clean structure.",
-        url: "https://github.com/Aethereal-Phoenix/Digital-Resume"
+        url: "https://github.com/Aethereal-Phoenix/Digital_Resume"
     }
 ]
 </script>
