@@ -14,7 +14,7 @@
 
             <p class="section-text">
                 <span class="teal">Console</span>.<wbr><span class="yellow">WriteLine</span>(<span
-                    class="orange">"Questions, opportunities, collaborations, or project inquiries — feel free to send
+                    class="orange">ç"Questions, opportunities, collaborations, or project inquiries — feel free to send
                     a message."</span>);
             </p>
 
@@ -24,14 +24,15 @@
 
         <section class="contact-wrapper">
 
-            <form action="https://formsubmit.co/webdesign@alsprague.tech" method="POST"
-                class="contact-card glass-card">
+            <form action="https://formsubmit.co/webdesign@alsprague.tech" method="POST" class="contact-card glass-card">
 
                 <!-- FormSubmit -->
                 <input type="hidden" name="_captcha" value="false">
 
                 <!-- Optional -->
                 <input type="hidden" name="_subject" value="New Portfolio Contact Submission">
+
+                <input type="hidden" name="_next" value="https://alsprague.tech/FormSubmitView">
 
                 <!-- Name Row -->
 

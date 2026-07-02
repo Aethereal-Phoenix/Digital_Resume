@@ -1,9 +1,11 @@
 // Imports
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../../components/views/HomeView.vue'
 import AboutView from '../../components/views/AboutView.vue'
 import ProjectsView from '../../components/views/ProjectsView.vue'
 import ContactView from '../../components/views/ContactView.vue'
+import FormSubmitView from '../../components/views/FormSubmitView.vue'
+
 
 const routes = [
     {
@@ -25,6 +27,11 @@ const routes = [
         path: '/contact',
         name: 'contact',
         component: ContactView
+    },
+    {
+        path: '/formSubmit',
+        name: 'formSubmit',
+        component: FormSubmitView
     }
 ]
 
